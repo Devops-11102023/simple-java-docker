@@ -2,15 +2,12 @@
 FROM openjdk:17-jdk-alpine
 
 # metadata
-LABEL maintainer="your-email@example.com"
-LABEL version="1.0"
-LABEL description="A simple Java application"
 
 # working directory
-WORKDIR /app
+WORKDIR /root/simple-java-docker
 
 # Copy source code into the container
-COPY src/Main.java /app/Main.java
+COPY src/Main.java /usr/share/nginx/html
 
 # Compile the Java code
 RUN javac Main.java
